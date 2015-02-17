@@ -29,4 +29,27 @@ public class WCTest {
 		assertEquals(result,48);
 	}		
 
+	@Test
+	public void countWords_1(){
+		String s = "hello, this is a good day.";
+		WC wc_obj = new WC();
+		int result = wc_obj.countWords(s);
+		assertEquals(result,6);
+	}
+
+	@Test
+	public void countWords_2(){
+		String s = "hello, this is a good day.\r\n";
+		WC wc_obj = new WC();
+		int result = wc_obj.countWords(s);
+		assertEquals(result,6);
+	}
+
+	@Test
+	public void countWords_3(){
+		String s = "hello, this is a good day.\r\nWhat do you think?\r\n";
+		WC wc_obj = new WC();
+		int result = wc_obj.countWords(s);
+		assertEquals(result,10);
+	}	
 }
