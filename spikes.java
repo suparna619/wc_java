@@ -17,7 +17,7 @@ import java.io.*;
 
 public class spikes{
    public static void main(String args[]){
-      String Str = new String("hello, this is a good day.\r\nWhat do you think?\r\n");
+      String Str = new String("hello, this is a good day.\r\n");
       String[] arr;
       int c = 0;
 
@@ -37,10 +37,10 @@ public class spikes{
       // }
       // System.out.println("");
       System.out.println("Return Value :" );
-      for (String retval: Str.split(" ")){
+      for (String retval: Str.split("\r\n")){
       	
       	// for(String rv: retval.split(" ")){
-      		c++;
+      	c++;
       	// }
         System.out.println(c+" : "+retval);
       }

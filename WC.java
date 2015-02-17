@@ -5,11 +5,7 @@ public class WC {
 	}
 
 	int countLines(String s){
-		int count = 0;
-		for (String line: s.split("\r\n")){
-      		count++;
-      	}
-		return count;
+		return s.split("\r\n").length;
 	}
 
 	int countWords(String s){
