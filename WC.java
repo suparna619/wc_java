@@ -1,11 +1,15 @@
 public class WC {
 
-	int countLength(String s){
+	int countCharacters(String s){
 		return s.length();
 	}
 
 	int countLines(String s){
-		return s.split("\r\n").length;
+		char last_element_of_string = s.charAt(s.length()-1);
+		int lines = s.split("\r\n").length;
+		if(lines == 1 && last_element_of_string != '\n')
+			lines -= 1;
+		return lines;
 	}
 
 	int countWords(String s){
@@ -15,5 +19,11 @@ public class WC {
 				count++;
       	}
 		return count;
+	}
+
+	String actual_WC(String s){
+		String result;
+		result = countLines(s)+"\t"+countWords(s)+"\t"+countCharacters(s);
+		return result;
 	}
 }
