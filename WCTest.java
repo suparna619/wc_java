@@ -51,5 +51,29 @@ public class WCTest {
 		WC wc_obj = new WC();
 		int result = wc_obj.countWords(s);
 		assertEquals(result,10);
-	}	
+	}
+
+	@Test
+	public void countLines_1(){
+		String s = "hello, this is a good day.";
+		WC wc_obj = new WC();
+		int result = wc_obj.countLines(s);
+		assertEquals(result,1);
+	}
+
+	@Test
+	public void countLines_2(){
+		String s = "hello, this is a good day.\r\n";
+		WC wc_obj = new WC();
+		int result = wc_obj.countLines(s);
+		assertEquals(result,1);
+	}
+
+	@Test
+	public void countLines_3(){
+		String s = "hello, this is a good day.\r\nWhat do you think?\r\n";
+		WC wc_obj = new WC();
+		int result = wc_obj.countLines(s);
+		assertEquals(result,2);
+	}
 }

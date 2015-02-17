@@ -37,12 +37,12 @@ public class spikes{
       // }
       // System.out.println("");
       System.out.println("Return Value :" );
-      for (String retval: Str.split("\r\n")){
+      for (String retval: Str.split(" ")){
       	
-      	for(String rv: retval.split(" ")){
+      	// for(String rv: retval.split(" ")){
       		c++;
-      	}
-        // System.out.println(c+" : "+retval);
+      	// }
+        System.out.println(c+" : "+retval);
       }
       System.out.println("count : "+c);
       System.out.println(Str);
