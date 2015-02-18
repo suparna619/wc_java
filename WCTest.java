@@ -90,6 +90,14 @@ public class WCTest {
 		String s = "hello, this is a good day.\r\nWhat do you think?";
 		WC wc_obj = new WC();
 		int result = wc_obj.countLines(s);
+		assertEquals(result,1);
+	}
+
+	@Test
+	public void countLines_5(){
+		String s = "     hello,       this is  \r\n   a       good\r\n";
+		WC wc_obj = new WC();
+		int result = wc_obj.countLines(s);
 		assertEquals(result,2);
 	}
 

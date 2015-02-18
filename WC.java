@@ -7,7 +7,7 @@ public class WC {
 	int countLines(String s){
 		char last_element_of_string = s.charAt(s.length()-1);
 		int lines = s.split("\r\n").length;
-		if(lines == 1 && last_element_of_string != '\n')
+		if(last_element_of_string != '\n')
 			lines -= 1;
 		return lines;
 	}

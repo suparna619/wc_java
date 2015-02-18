@@ -18,11 +18,13 @@ import java.io.*;
 public class spikes{
    public static void main(String args[]){
       String Str = new String("   hello    data");
+      String s = "hello, this is a good day.\r\n";
       String[] arr;
       int c = 0;
       Str = Str.trim();
       Str = Str.replaceAll("\\s+", " ");
-      System.out.println(Str);
+      // System.out.println(Str);
+      System.out.println(s.split("\r\n").length);
       // System.out.println("Return Value :" );
       // for (String retval: Str.split("-", 2)){
       //    System.out.println(retval);
