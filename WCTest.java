@@ -54,6 +54,14 @@ public class WCTest {
 	}
 
 	@Test
+	public void countWords_4(){
+		String s = "     hello,       this is  \r\n   a       good\r\n";
+		WC wc_obj = new WC();
+		int result = wc_obj.countWords(s);
+		assertEquals(result,5);
+	}
+
+	@Test
 	public void countLines_1(){
 		String s = "hello, this is a good day.";
 		WC wc_obj = new WC();

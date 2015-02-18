@@ -13,6 +13,8 @@ public class WC {
 	}
 
 	int countWords(String s){
+		s = s.trim();
+		s = s.replaceAll("\\s+", " ");
 		int count = 0;
 		for (String line: s.split("\r\n")){
 			for (String spaces: line.split(" "))

@@ -17,10 +17,12 @@ import java.io.*;
 
 public class spikes{
    public static void main(String args[]){
-      String Str = new String("hello, this is a good day.\r\n");
+      String Str = new String("   hello    data");
       String[] arr;
       int c = 0;
-
+      Str = Str.trim();
+      Str = Str.replaceAll("\\s+", " ");
+      System.out.println(Str);
       // System.out.println("Return Value :" );
       // for (String retval: Str.split("-", 2)){
       //    System.out.println(retval);
@@ -36,15 +38,15 @@ public class spikes{
       //    System.out.println(retval);
       // }
       // System.out.println("");
-      System.out.println("Return Value :" );
-      for (String retval: Str.split("\r\n")){
+      // System.out.println("Return Value :" );
+      // for (String retval: Str.split("\r\n")){
       	
-      	// for(String rv: retval.split(" ")){
-      	c++;
-      	// }
-        System.out.println(c+" : "+retval);
-      }
-      System.out.println("count : "+c);
-      System.out.println(Str);
+      // 	for(String rv: retval.split(" ")){
+      // 	     c++;
+      // 	}
+      //   System.out.println(c+" : "+retval);
+      // }
+      // System.out.println("count : "+c);
+      // System.out.println(Str);
    }
 }
