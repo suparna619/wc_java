@@ -101,10 +101,27 @@ public class WCTest {
 		assertEquals(result,2);
 	}
 
+	// @Test
+	// public void countLines_6(){
+	// 	String s = "\r\n";
+	// 	WC wc_obj = new WC();
+	// 	int result = wc_obj.countLines(s);
+	// 	assertEquals(result,1);
+	// }
+
 	@Test
 	public void asWC_1(){
 		String s = "hello, this is a good day.\r\nWhat do you think?\r\n";
 		WC wc_obj = new WC();
+		String result = wc_obj.actual_WC(s);
+		assertEquals(result,"2\t10\t48");
+	}
+
+	@Test
+	public void wc_file_1(){
+		String filePath = "one.txt";
+		WC wc_obj = new WC();
+		String s = wc_obj.readFile(filePath);
 		String result = wc_obj.actual_WC(s);
 		assertEquals(result,"2\t10\t48");
 	}
